@@ -1,0 +1,500 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+<head> 
+    
+<!-- Head section is for data about the webpage. Enter title, author, and description to match your needs -->
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>megan danielle fitzner</title>
+    <meta name="author" content="Megan Fitzner">
+    <meta name="description" content="home page of personal portfolio">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Lato:wght@300&family=Lora:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body id="homepage">
+
+<main class="page container"> 
+    
+<h1> megan danielle fitzner </h1>
+    
+<nav>
+    <ul>
+    
+        <li> <a href = "index.html">HOME</a></li>
+        <li> <a href = "interests.html">INTERESTS</a></li>
+        <li> <a href = "portfolio.html">PORTFOLIO</a></li>
+        <li> <a href = "projects.html">PROJECTS</a></li>
+        <li> <a href = "contact.html">CONTACT</a></li>
+        
+    </ul>
+</nav>
+    
+<h1> previous work </h1>
+    
+<!-- https://www.w3schools.com/howto/howto_js_lightbox.asp -->
+    
+<h2> ADOBE PHOTOSHOP </h2>
+    
+<p>
+Adobe Photoshop is the application that I am most famailiar with in the Adobe Suite. I have been utilizing the platform from a young age when curiosity struck and have worked on different projects from middle school up until now. 
+</p>
+    
+<p> Below you will find two examples of product mockups that I have developed for different marketing campaigns for my Principles of Marketing and Analytical Research and Reasoning courses.  
+</p> 
+
+<!-- thumbnails of project images --> 
+<div class="project-row"> 
+  <div class="project-column">
+    <img src="photoshop_image01.png" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="project-column">
+    <img src="photoshop_image02.png" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="project-column">
+    <img src="photoshop_image03.png" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="project-column">
+    <img src="photoshop_image04.png" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+</div> 
+
+<!-- full screen of project images --> 
+<div id="myModal" class="modal"> 
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <img src="photoshop_image01.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="photoshop_image02.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="photoshop_image03.png" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <img src="photoshop_image04.png" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+<!-- project thumbnails in full screen + captions --> 
+<div class="project-caption-container">
+      <p id="caption"></p>
+    </div>
+        <div class="project-column">
+          <img class="demo cursor" src="photoshop_image01.png" style="width:100%" onclick="currentSlide(1)" alt="mockup">
+        </div>
+        <div class="project-column">
+          <img class="demo cursor" src="photoshop_image02.png" style="width:100%" onclick="currentSlide(2)" alt="final">
+        </div>
+        <div class="project-column">
+          <img class="demo cursor" src="photoshop_image03.png" style="width:100%" onclick="currentSlide(3)" alt="mockup">
+        </div>
+        <div class="project-column">
+          <img class="demo cursor" src="photoshop_image04.png" style="width:100%" onclick="currentSlide(4)" alt="final">
+        </div>
+    </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+</script>
+ 
+<h2> ADOBE ILLUSTRATOR </h2>
+
+    
+<p>
+Adobe Illustrator is a platform that I started working with my sophomore year of college and something that I am continue to learn how to use. Some of the things that I have learned how to create with Illustrator include logo design, image tracing, and digital portraits while gaining a deeper understanding of the different tools and their functions along the way.
+</p>
+    
+<!-- thumbnails of project images --> 
+<div class="project-row"> 
+  <div class="project-column">
+    <img src="illustrator_image01.png" style="width:100%" onclick="openModal2();currentSlide2(1)" class="hover-shadow cursor2">
+  </div>
+  <div class="project-column">
+    <img src="illustrator_image02.png" style="width:100%" onclick="openModal2();currentSlide2(2)" class="hover-shadow cursor2">
+  </div>
+  <div class="project-column">
+    <img src="illustrator_image03.png" style="width:100%" onclick="openModal2();currentSlide2(3)" class="hover-shadow cursor2">
+  </div>
+  <div class="project-column">
+    <img src="illustrator_image04.png" style="width:100%" onclick="openModal2();currentSlide2(4)" class="hover-shadow cursor2">
+  </div>
+</div> 
+    
+<!-- full screen of project images --> 
+<div id="myModal2" class="modal2"> 
+  <span class="close2 cursor2" onclick="closeModal2()">&times;</span>
+  <div class="modal-content2">
+
+    <div class="mySlides2">
+      <img src="illustrator_image01.png" style="width:100%">
+    </div>
+
+    <div class="mySlides2">
+      <img src="illustrator_image02.png" style="width:100%">
+    </div>
+
+    <div class="mySlides2">
+      <img src="illustrator_image03.png" style="width:100%">
+    </div>
+    
+    <div class="mySlides2">
+      <img src="illustrator_image04.png" style="width:100%">
+    </div>
+    
+    <a class="prev2" onclick="plusSlides2(-1)">&#10094;</a>
+    <a class="next2" onclick="plusSlides2(1)">&#10095;</a>
+
+<!-- project thumbnails in full screen + captions --> 
+<div class="project-caption-container">
+      <p id="caption2"></p>
+    </div>
+        <div class="project-column">
+          <img class="demo cursor" src="illustrator_image01.png" style="width:100%" onclick="currentSlide2(1)" alt="mockup">
+        </div>
+        <div class="project-column">
+          <img class="demo cursor" src="illustrator_image02.png" style="width:100%" onclick="currentSlide2(2)" alt="final">
+        </div>
+        <div class="project-column">
+          <img class="demo cursor" src="illustrator_image03.png" style="width:100%" onclick="currentSlide2(3)" alt="mockup">
+        </div>
+        <div class="project-column">
+          <img class="demo cursor" src="illustrator_image04.png" style="width:100%" onclick="currentSlide2(4)" alt="final">
+        </div>
+    </div>
+</div>
+
+      
+<script>
+function openModal2() {
+  document.getElementById("myModal2").style.display = "block";
+}
+
+function closeModal2() {
+  document.getElementById("myModal2").style.display = "none";
+}
+
+var slideIndex2 = 1;
+showSlides2(slideIndex2);
+
+function plusSlides2(n) {
+  showSlides2(slideIndex2 += n);
+}
+
+function currentSlide2(n) {
+  showSlides2(slideIndex2 = n);
+}
+
+function showSlides2(n) {
+  var i2;
+  var slides2 = document.getElementsByClassName("mySlides2");
+  var dots2 = document.getElementsByClassName("demo2");
+  var captionText2 = document.getElementById("caption2");
+  if (n > slides2.length) {slideIndex2 = 1}
+  if (n < 1) {slideIndex2 = slides2.length}
+  for (i2 = 0; i2 < slides2.length; i2++) {
+      slides2[i2].style.display = "none";
+  }
+  for (i2 = 0; i2 < dots2.length; i2++) {
+      dots2[i2].className = dots2[i2].className.replace(" active", "");
+  }
+  slides2[slideIndex2-1].style.display = "block";
+  dots2[slideIndex2-1].className += " active";
+  captionText2.innerHTML = dots2[slideIndex2-1].alt;
+    }
+</script>
+    
+<h2> HTML & CSS </h2>
+    
+<p>This project was the first time that I utilized the combination of HTML and CSS together to create a website. </p>
+
+<p class="cookbook">
+Take a look at the cookbook I created 
+    <a class="cookbook" href="https://etbd.tech/fitznemd_185793/exercise5-copy/"> 
+here! </a> 
+</p>
+    
+<!-- thumbnails of project images --> 
+<div class="project-row"> 
+  <div class="project-column">
+    <img src="cookbook_image01.png" style="width:100%" onclick="openModal3();currentSlide3(1)" class="hover-shadow cursor3">
+  </div>
+  <div class="project-column">
+    <img src="cookbook_image02.png" style="width:100%" onclick="openModal3();currentSlide3(2)" class="hover-shadow cursor3">
+  </div>
+  <div class="project-column">
+    <img src="cookbook_image03.png" style="width:100%" onclick="openModal3();currentSlide3(3)" class="hover-shadow cursor3">
+  </div>
+  <div class="project-column">
+    <img src="cookbook_image04.png" style="width:100%" onclick="openModal3();currentSlide3(4)" class="hover-shadow cursor3">
+  </div>
+</div> 
+    
+<!-- full screen of project images --> 
+<div id="myModal3" class="modal3"> 
+  <span class="close3 cursor3" onclick="closeModal3()">&times;</span>
+  <div class="modal-content3">
+
+    <div class="mySlides3">
+      <img src="cookbook_image01.png" style="width:100%">
+    </div>
+
+    <div class="mySlides3">
+      <img src="cookbook_image02.png" style="width:100%">
+    </div>
+
+    <div class="mySlides3">
+      <img src="cookbook_image03.png" style="width:100%">
+    </div>
+    
+    <div class="mySlides3">
+      <img src="cookbook_image04.png" style="width:100%">
+    </div>
+    
+    <a class="prev3" onclick="plusSlides3(-1)">&#10094;</a>
+    <a class="next3" onclick="plusSlides3(1)">&#10095;</a>
+
+<!-- project thumbnails in full screen + captions --> 
+<div class="project-caption-container">
+      <p id="caption3"></p>
+    </div>
+        <div class="project-column">
+          <img class="demo cursor" src="cookbook_image01.png" style="width:100%" onclick="currentSlide3(1)" alt="mockup">
+        </div>
+        <div class="project-column">
+          <img class="demo cursor" src="cookbook_image02.png" style="width:100%" onclick="currentSlide3(2)" alt="final">
+        </div>
+        <div class="project-column">
+          <img class="demo cursor" src="cookbook_image03.png" style="width:100%" onclick="currentSlide3(3)" alt="mockup">
+        </div>
+        <div class="project-column">
+          <img class="demo cursor" src="cookbook_image04.png" style="width:100%" onclick="currentSlide3(4)" alt="final">
+        </div>
+    </div>
+</div>
+
+      
+<script>
+function openModal3() {
+  document.getElementById("myModal3").style.display = "block";
+}
+
+function closeModal3() {
+  document.getElementById("myModal3").style.display = "none";
+}
+
+var slideIndex3 = 1;
+showSlides3(slideIndex3);
+
+function plusSlides3(n) {
+  showSlides3(slideIndex3 += n);
+}
+
+function currentSlide3(n) {
+  showSlides3(slideIndex3 = n);
+}
+
+function showSlides3(n) {
+  var i3;
+  var slides3 = document.getElementsByClassName("mySlides3");
+  var dots3 = document.getElementsByClassName("demo3");
+  var captionText3 = document.getElementById("caption3");
+  if (n > slides3.length) {slideIndex3 = 1}
+  if (n < 1) {slideIndex3 = slides3.length}
+  for (i3 = 0; i3 < slides3.length; i3++) {
+      slides3[i3].style.display = "none";
+  }
+  for (i3 = 0; i3 < dots3.length; i3++) {
+      dots3[i3].className = dots2[i3].className.replace(" active", "");
+  }
+  slides3[slideIndex3-1].style.display = "block";
+  dots3[slideIndex3-1].className += " active";
+  captionText3.innerHTML = dots3[slideIndex3-1].alt;
+    }
+</script>
+    
+<h3> skills and abilities </h3> 
+<!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_star_rating --> 
+    
+<div class="skills-row">
+    
+    <div class="skills-column"> 
+<h4> ADOBE PHOTOSHOP  </h4>
+<h4> ADOBE ILLUSTRATOR  </h4>
+<h4> HTML AND CSS  </h4>
+<h4> MICROSOFT OFFICE SUITE </h4>
+<h4> CANVA DESIGN </h4>
+    </div>
+    
+    <div class="skills-column">
+    
+<!-- photoshop --> 
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star unchecked"></span>
+    
+<p> </p>
+  
+<!-- illustrator --> 
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star unchecked"></span>
+<span class="fa fa-star unchecked"></span>
+        
+<p> </p>
+    
+<!-- html & css --> 
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star unchecked"></span>
+<span class="fa fa-star unchecked"></span>
+        
+<p> </p>
+    
+<!-- office suite --> 
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star unchecked"></span>
+        
+<p> </p>
+   
+<!-- canva --> 
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star unchecked"></span>
+        
+        </div>
+    </div>
+    
+<h1> on campus projects </h1>
+    
+<h2 class="portfolio"> FIFTH THIRD BANK CLIENT CHALLENGE  </h2>
+<p class="date"> JAN 2019 - MAY 2019 </p>
+    
+<p>
+Our team was tasked to better their inclusivity and diversity specifically within the Asian American community. Our team analyzed consumer banking trends and client-provided SQL data. By utilizing this information, we developed and presented an innovative solution for Fifth Third Bank. 
+</p>
+    
+<h2 class="portfolio"> FIRST YEAR INTEGRATED CORE  </h2>
+<p class="date"> JAN 2019 - MAY 2019 </p>
+    
+<p>
+Worked with Fifth Third bank in the Farmer School of Business First Year Integrated Core (FYIC) to create an industry disruptor Fifth Third Bank could implement. </p>
+
+<p>The FYIC consists of four courses: Foundations of Business, Foundations of Business Communication, Creativity, Innovation and Entrepreneurship, and Introduction to Computational Thinking for Business.</p>
+
+<p>These courses are specifically designed to build the skills needed for student success in the workplace. 
+</p>
+    
+<h2 class="portfolio"> ADVANCING WOMEN IN ENTREPRENEURSHIP POP UP SHOP </h2>
+<p class="date"> OCT 2018 </p>
+    
+<p> Advancing Women in Entrepreneurship hosts a pop-up shop featuring female-founders once in the fall and once in the spring. Our goal is to bring light to businesses of all kinds to facilitate a supportive community to sell their products, tell students about their story, network with other female entrepreneurs, and gain brand exposure.
+</p>
+    
+<p> The Fall 2018 Pop Up Shop consisted of 10 female-ran vendors showcasing their services/products and stories in Miami's student center; over $200 in sales were made.
+</p>
+
+<footer>
+<nav>
+    <ul class="pages">
+    
+        <li> <a href = "index.html">HOME</a></li>
+        <li> <a href = "interests.html">INTERESTS</a></li>
+        <li> <a href = "portfolio.html">PORTFOLIO</a></li>
+        <li> <a href = "projects.html">PROJECTS</a></li>
+        <li> <a href = "contact.html">CONTACT</a></li>
+        
+    </ul>
+</nav>    
+    
+<div class="center">
+<div id="social-test">
+  
+<h2>WANT TO STAY CONNECTED?</h2> 
+<!-- https://codepen.io/michaelrossi/pen/RWxmbb/ --> 
+
+<ul class="social">
+  <li><a href="https://www.pinterest.com/mfitzner/">
+      <i class="fa fa-pinterest" aria-hidden="true"></i> </a> </li>
+ 
+  <li><a href="https://www.linkedin.com/in/meganfitzner/">
+      <i class="fa fa-linkedin" aria-hidden="true"></i> </a> </li>
+ 
+  <li><a href="https://www.instagram.com/meganfitzner/">
+      <i class="fa fa-instagram" aria-hidden="true"></i> </a> </li>
+ 
+  <li><a href="https://www.facebook.com/megan.fitzner">
+      <i class="fa fa-facebook" aria-hidden="true"></i> </a> </li>
+    
+  <li><a href="mailto:fitznemd@miamioh.edu">
+      <i class="fa fa-envelope" aria-hidden="true"></i> </a> </li>
+
+</ul>
+
+    </div>
+  </div>
+    
+</footer> 
+    
+</main>
+
+</body>
+
+</html>
